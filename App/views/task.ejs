@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task List</title>
+</head>
+<body>
+	<h1>Task List</h1>
+
+	<a href="/tasks/new">New Task</a>
+
+	<ul>
+		<% tasks.forEach(function(task) { %>
+			<li><a href="/tasks/<%= task.id %>"><%= task.title %></a></li>
+		<% }); %>
+	</ul>
+</body>
+</html>
